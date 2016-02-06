@@ -9,7 +9,7 @@ lb:
 bosun:
   image: stackexchange/bosun 
   links:
-    - "graphite:graphiteº
+    - "graphite:graphite"
   ports:
     - "8070:8070"
 graphite:
