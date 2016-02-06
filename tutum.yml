@@ -1,0 +1,14 @@
+bosun:
+  image: stackexchange/bosun 
+  links:
+    - "bosun:bosun"
+  ports:
+    - "8070:8070"
+graphite:
+  image: hopsoft/graphite-statsd 
+  links:
+    - "graphite:graphite"
+  ports:
+    - "8080:8080"
+    - "2003:2003"
+    - "8125:8125"
