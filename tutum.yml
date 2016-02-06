@@ -1,13 +1,19 @@
+lb:
+  image: tutum/haproxy
+  links:
+    - "bosun:bosun"
+  ports:
+    - "80:80"
+  roles:
+    - global
 bosun:
   image: stackexchange/bosun 
   links:
-    - "bosun:bosun"
+    - "graphite:graphiteº
   ports:
     - "8070:8070"
 graphite:
   image: hopsoft/graphite-statsd 
-  links:
-    - "graphite:graphite"
   ports:
     - "8080:8080"
     - "2003:2003"
